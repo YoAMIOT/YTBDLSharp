@@ -2,7 +2,7 @@
 
 A simple command-line YouTube audio downloader written in **C# / .NET 10**.
 
-YTBDLSharp uses [YoutubeExplode](https://github.com/Tyrrrz/YoutubeExplode) to retrieve YouTube video and audio streams.
+YTBDLSharp uses [YoutubeExplode](https://github.com/Tyrrrz/YoutubeExplode) to retrieve Youtube audio streams and video informations.
 
 ## Features
 
@@ -45,7 +45,7 @@ ffmpeg -version
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/YoAMIOT/YTBDLSharp
 cd ytbdlsharp
 ```
 
@@ -69,20 +69,36 @@ dotnet run
 
 ## Usage
 
+Print the help:
 ```text
-YTBDLSharp <YouTube URL> [output directory]
+ytbdlsharp --help
+
+or
+
+ytbdlsharp -h
+```
+
+```text
+ytbdlsharp
+(This will prompt you to input at least the Youtube URL.)
+
+ytbdlsharp <YouTube URL>
+(This will download the audio or playlist audios in the current directory.)
+
+ytbdlsharp <YouTube URL> [output directory]
+(This will download the audio or playlist audios in the specified directory.)
 ```
 
 Example:
 
 ```bash
-./YTBDLSharp "https://www.youtube.com/watch?v=..."
+./ytbdlsharp "https://www.youtube.com/watch?v=..."
 ```
 
 Specify an output directory:
 
 ```bash
-./YTBDLSharp "https://www.youtube.com/watch?v=..." ~/Music
+./ytbdlsharp "https://www.youtube.com/watch?v=..." ~/Music
 ```
 
 If the specified directory does not exist, YTBDLSharp will ask whether it should be created.
