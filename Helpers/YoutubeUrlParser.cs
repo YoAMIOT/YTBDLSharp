@@ -29,14 +29,12 @@ namespace YTBDLSharp.Helpers
             // Default to Video if not determined otherwise.
             resourceType = YoutubeResourceType.Video;
 
-            // Validate the URL format.
-            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri? uri))
+            if (ValidateURL(url) == false)
             {
                 return false;
             }
 
-            // Check if the host is a recognized YouTube host.
-            if (!IsYouTubeHost(uri.Host))
+            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri? uri))
             {
                 return false;
             }
@@ -110,6 +108,28 @@ namespace YTBDLSharp.Helpers
             }
 
             return null;
+        }
+
+        /// <summary>
+        /// Validates whether the provided URL is a valid YouTube URL.
+        /// </summary>
+        /// <param name="url">The URL to validate.</param>
+        /// <returns><c>true</c> if the URL is valid; otherwise, <c>false</c>.</returns>
+        public static bool ValidateURL(string url)
+        {
+            // Validate the URL format.
+            if (!Uri.TryCreate(url, UriKind.Absolute, out Uri? uri))
+            {
+                return false;
+            }
+
+            // Check if the host is a recognized YouTube host.
+            if (!IsYouTubeHost(uri.Host))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }
