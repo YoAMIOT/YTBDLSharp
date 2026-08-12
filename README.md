@@ -36,6 +36,10 @@ Verify the installation:
 ffmpeg -version
 ```
 
+## Download
+
+[Download the latest release](../../releases/latest)
+
 ## Building
 
 Clone the repository:
