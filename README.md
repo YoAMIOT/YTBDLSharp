@@ -71,34 +71,34 @@ dotnet run
 
 Print the help:
 ```text
-ytbdlsharp --help
+./YTBDLSharp --help
 
 or
 
-ytbdlsharp -h
+./YTBDLSharp -h
 ```
 
-```text
-ytbdlsharp
+```bash
+./YTBDLSharp
 (This will prompt you to input at least the Youtube URL.)
 
-ytbdlsharp <YouTube URL>
+./YTBDLSharp <YouTube URL>
 (This will download the audio or playlist audios in the current directory.)
 
-ytbdlsharp <YouTube URL> [output directory]
+./YTBDLSharp <YouTube URL> [output directory]
 (This will download the audio or playlist audios in the specified directory.)
 ```
 
 Example:
 
 ```bash
-./ytbdlsharp "https://www.youtube.com/watch?v=..."
+./YTBDLSharp "https://www.youtube.com/watch?v=..."
 ```
 
 Specify an output directory:
 
 ```bash
-./ytbdlsharp "https://www.youtube.com/watch?v=..." ~/Music
+./YTBDLSharp "https://www.youtube.com/watch?v=..." ~/Music
 ```
 
 If the specified directory does not exist, YTBDLSharp will ask whether it should be created.
