@@ -70,26 +70,28 @@ dotnet run
 ## Usage
 
 Print the help:
-```text
+```bash
 ./YTBDLSharp --help
-
+```
 or
-
+```bash
 ./YTBDLSharp -h
 ```
 
+To be prompted to input at least the Youtube URL.
 ```bash
 ./YTBDLSharp
-(This will prompt you to input at least the Youtube URL.)
-
+```
+To download the audio or playlist audios in the current directory.
+```bash
 ./YTBDLSharp <YouTube URL>
-(This will download the audio or playlist audios in the current directory.)
-
+```
+To download the audio or playlist audios in the specified directory.
+```bash
 ./YTBDLSharp <YouTube URL> [output directory]
-(This will download the audio or playlist audios in the specified directory.)
 ```
 
-Example:
+#### Example:
 
 ```bash
 ./YTBDLSharp "https://www.youtube.com/watch?v=..."
